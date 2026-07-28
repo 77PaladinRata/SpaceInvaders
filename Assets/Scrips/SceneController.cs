@@ -20,7 +20,8 @@ public class SceneController : MonoBehaviour
     private IEnumerator LoadSceneWithFade(string sceneName)
     {
         fadeAnimator.Play("FadeOut");
-        yield return fadeAnimator.WaitForCurrentAnimation();
+        yield return new WaitForSeconds(1f); ///* ANTES ESTABA EN 1.5F
+                ///* fadeAnimator.WaitForCurrentAnimation();
         ///* yield return new WaitForSeconds(fadeAnimator.GetCurrentAnimatorStateInfo(0).length);
         SceneManager . LoadScene( sceneName) ;
     }
