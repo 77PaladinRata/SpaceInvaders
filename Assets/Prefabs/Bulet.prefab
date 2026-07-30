@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 291281530058290232}
   - component: {fileID: 846390879009782035}
   - component: {fileID: 4044870452977446514}
+  - component: {fileID: 3860981210544071629}
   m_Layer: 0
   m_Name: Bulet
   m_TagString: Untagged
@@ -200,7 +201,7 @@ TrailRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MinVertexDistance: 0.5
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
 --- !u!114 &4044870452977446514
@@ -215,7 +216,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcb26d8ea364894b9b22335943faa75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  speed: 10
+  speed: 25
+--- !u!114 &3860981210544071629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080379008111348594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad4541ec6e78c549b21afcd4123d6ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyInSeconds
+  secondsToDestroy: 2
 --- !u!1 &6090232145679859768
 GameObject:
   m_ObjectHideFlags: 0

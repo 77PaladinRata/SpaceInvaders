@@ -6,20 +6,28 @@ public class Pool : MonoBehaviour
     private Stack<GameObject> poolStack = new Stack<GameObject>();
     private readonly HashSet<GameObject> activeObjects = new HashSet<GameObject>();
     public IReadOnlyCollection<GameObject> ActiveObjects => activeObjects;
-    public GameObject prefab;
-    public GameObject InstantiateObject(Vector3 position)
-    {
+    public GameObject prefab; ///*public GameObject InstantiateObject(Vector3 position)
+    public GameObject InstantiateObject(Vector3 position, bool isTurnedOff = false)
+    {                         ///* antes estaba este
         GameObject currentObject;
-        if (poolStack.Count > 0)
+        if (poolStack.Count > 0) ///* moviendo codigos
         {
             currentObject = poolStack.Pop();
-            currentObject.SetActive(true);
+            if (!isTurnedOff)
+            {
+                currentObject.SetActive(true);
+            }
+            ///* estas ya estaban
             currentObject.transform.position = position;
             currentObject.transform.rotation = Quaternion.identity;
         }
         else
         {
             currentObject = Instantiate(prefab, position, Quaternion.identity);
+            if (isTurnedOff)
+            {
+                currentObject.SetActive(false); 
+            }
             currentObject.AddComponent<PoolObject>().Pool = this;
         }
         activeObjects.Add(currentObject);

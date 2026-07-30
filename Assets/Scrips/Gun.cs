@@ -34,12 +34,13 @@ public class Gun : MonoBehaviour
         }
         Vector3 direction = (targetPoint - transform.position).normalized;
         bulletPivot. forward = direction;
-        GameObject bullet = PoolManager.Instance.GetObject(bulletPrefab,bulletPivot.position);
-        bullet.SetActive(false);
-        bullet.transform.position = bulletPivot.position;
+        GameObject bullet = PoolManager.Instance.GetObject(bulletPrefab, bulletPivot.position, true);
         bullet.transform.LookAt(targetPoint);
-        bullet.SetActive(true);
-        bullet.transform. LookAt(targetPoint);
+        ///*bullet.SetActive(false);
+        ///*bullet.transform.position = bulletPivot.position;
+        ///*bullet.transform.LookAt(targetPoint);
+        ///*bullet.SetActive(true);
+        ///*bullet.transform. LookAt(targetPoint);
         bullet.SetActive(true);
         animator.Play("Shoot", 0, 0f);
         SoundManager.instance.Play(soundName); ///* sonido marino ***laser_shoot********
