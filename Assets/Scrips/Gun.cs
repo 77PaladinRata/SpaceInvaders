@@ -47,6 +47,7 @@ public class Gun : MonoBehaviour
     }
     private void CheckEnemy(Collider collider)
     {
+        Debug.Log(collider.gameObject.name);
         if (collider.CompareTag("Enemy"))
         {
             Health enemyHealth = collider.GetComponent<Health>();
