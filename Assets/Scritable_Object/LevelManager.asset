@@ -14,16 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   levels:
   - enemiesData:
+    - enemyPrefab: {fileID: 9127395342206614652, guid: 234504d7ba2bb4646921de33f5534ed9, type: 3}
+      spawnTime: 2
+    - enemyPrefab: {fileID: 4634582417296140552, guid: 0b4e062ed3fd3ea4bb0bb0da7e6ed405, type: 3}
+      spawnTime: 4
+  - enemiesData:
     - enemyPrefab: {fileID: 4634582417296140552, guid: 0b4e062ed3fd3ea4bb0bb0da7e6ed405, type: 3}
       spawnTime: 3
     - enemyPrefab: {fileID: 4634582417296140552, guid: 0b4e062ed3fd3ea4bb0bb0da7e6ed405, type: 3}
-      spawnTime: 5
-    - enemyPrefab: {fileID: 4634582417296140552, guid: 0b4e062ed3fd3ea4bb0bb0da7e6ed405, type: 3}
       spawnTime: 6
+    - enemyPrefab: {fileID: 4634582417296140552, guid: 0b4e062ed3fd3ea4bb0bb0da7e6ed405, type: 3}
+      spawnTime: 9
   - enemiesData:
     - enemyPrefab: {fileID: 9127395342206614652, guid: 234504d7ba2bb4646921de33f5534ed9, type: 3}
-      spawnTime: 3
+      spawnTime: 2
+    - enemyPrefab: {fileID: 4634582417296140552, guid: 0b4e062ed3fd3ea4bb0bb0da7e6ed405, type: 3}
+      spawnTime: 2
     - enemyPrefab: {fileID: 9127395342206614652, guid: 234504d7ba2bb4646921de33f5534ed9, type: 3}
-      spawnTime: 5
-    - enemyPrefab: {fileID: 9127395342206614652, guid: 234504d7ba2bb4646921de33f5534ed9, type: 3}
-      spawnTime: 6
+      spawnTime: 8
+    - enemyPrefab: {fileID: 4634582417296140552, guid: 0b4e062ed3fd3ea4bb0bb0da7e6ed405, type: 3}
+      spawnTime: 8

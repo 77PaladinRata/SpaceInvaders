@@ -660,8 +660,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.1181206, z: 2.1998572}
-  m_Center: {x: 0, y: 0.7304831, z: -0.5999286}
+  m_Size: {x: 1, y: 1.4991575, z: 3.6918077}
+  m_Center: {x: 0, y: 0.7395554, z: 0.14604694}
 --- !u!54 &6036400335332613169
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   healthSlider: {fileID: 7003997122172303844}
-  maxHealth: 100
+  maxHealth: 60
   onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
@@ -738,10 +738,10 @@ MonoBehaviour:
   destroySoundName: Nave Destruida
   appearSoundName: Long Growl Nave
   speed: 10
-  damage: 50
+  damage: 15
   distanceFromTarget: 10
   pathLength: 200
-  bulletPrefab: {fileID: 6080379008111348594, guid: 5c3274edb39cfb5498d20f687cc7d13d, type: 3}
+  bulletPrefab: {fileID: 6080379008111348594, guid: 552616779e3874448a5a83353f6e18e7, type: 3}
   bulletPivot: {fileID: 8639252863629098210}
   randomDistanceMultiplier: 0.3
   shootSoundName: weapon_shot

@@ -13,7 +13,7 @@ public class Asteroid : Enemy
         base.OnEnable();
         rotateScript.enabled = true;
         animator.Play("Idle", 0, 0f);
-        ///* SoundManager.instance.Play("ÑAM ÑAM ÑAM");
+        ///* SoundManager.instance.Play("TAM TAM TAM TAM");
     }///* Moviendo esta linea al Enemy
     private void Update() 
     {

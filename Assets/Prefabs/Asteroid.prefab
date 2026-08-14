@@ -211,9 +211,9 @@ MonoBehaviour:
   target: {fileID: 0}
   destroyAnimationName: Destroy
   destroySoundName: Shark
-  appearSoundName: 
+  appearSoundName: TAM TAM TAM TAM
   speed: 6
-  damage: 20
+  damage: 1
   rotateScript: {fileID: 5568038900707744753}
   distanceToTarget: 66
 --- !u!114 &5568038900707744753
