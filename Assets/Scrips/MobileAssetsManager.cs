@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MobileAssetsManager : MonoBehaviour
 {
@@ -6,31 +7,33 @@ public class MobileAssetsManager : MonoBehaviour
     private GameObject[] mobileAssets;
     [SerializeField]
     private GameObject[] desktopAssets;
+    [SerializeField]
+    private Transform desktopCamera;
+    [SerializeField]
+    private Transform mobileCamera;
+    [SerializeField]
+    private Canvas gameCanvas;
+    [SerializeField]
+    private float canvasDistanceFromCamera = 867;
+    [SerializeField]
+    private float canvasMobileDistanceFromCamera = 650;
     private void Awake()
     {
         if (Application.isEditor)
         {
             SetActiveAssets(desktopAssets, true);
+            SetCanvasToCamera(desktopCamera, canvasDistanceFromCamera);
         }
         else if (Application.isMobilePlatform)
         {
             SetActiveAssets(mobileAssets, true);
+            SetCanvasToCamera(mobileCamera, canvasMobileDistanceFromCamera);
         }
         else
         {
             SetActiveAssets(desktopAssets, true);
+            SetCanvasToCamera(desktopCamera, canvasDistanceFromCamera);
         }
-        ///* #if UNITY_IOS || UNITY_ANDROID
-           ///*foreach (var asset in mobileAssets)
-           ///*{
-                ///* SetActiveAvasset.SetActive(true);
-           ///*}
-        ///*#else
-            ///*foreach (var asset in desktopAssets)
-            ///*{
-                ///*asset.SetActive(true);
-            ///*}
-        ///*#endif
     }
     private void SetActiveAssets(GameObject[] assets, bool isActive)
     {
@@ -38,5 +41,10 @@ public class MobileAssetsManager : MonoBehaviour
         {
             asset.SetActive(isActive);
         }
+    }
+    private void SetCanvasToCamera(Transform cameraTransform, float distanceFromCamera = 0)
+    {
+        gameCanvas.transform.SetParent(cameraTransform);
+        gameCanvas.transform.localPosition = new Vector3(0, 0, distanceFromCamera);
     }
 }
